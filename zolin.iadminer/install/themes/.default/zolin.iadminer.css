@@ -1,0 +1,7 @@
+#iadminer_menu_icon {
+    background-image: url('icons/zolin.iadminer/icon.png')
+}
+
+.iadminer_menu_icon {
+    background: url('icons/zolin.iadminer/icon.png') 6px 1px no-repeat !important;
+}

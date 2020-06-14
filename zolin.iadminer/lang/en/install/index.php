@@ -1,0 +1,5 @@
+<?
+$MESS["ZOLIN_IADMINER_MODULE_NAME"] = "Adminer SQL";
+$MESS["ZOLIN_IADMINER_MODULE_DESC"] = "SQL via web interface";
+$MESS["ZOLIN_IADMINER_PARTNER_NAME"] = "Zolin Ivan (iShturmavik)";
+$MESS["ZOLIN_IADMINER_PARTNER_URI"] = "";
