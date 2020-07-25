@@ -47,6 +47,14 @@ class zolin_iadminer extends CModule
             true
         );
 
+        // копируем css-файлы, необходимые для работы модуля
+        CopyDirFiles(
+            __DIR__ . '/assets/styles',
+            \Bitrix\Main\Application::getDocumentRoot() . '/bitrix/css/' . $this->MODULE_ID . '/',
+            true,
+            true
+        );
+
 
         CopyDirFiles(__DIR__ . '/admin', $_SERVER['DOCUMENT_ROOT'] . '/bitrix/admin');
         CopyDirFiles(__DIR__ . '/themes', $_SERVER['DOCUMENT_ROOT'] . '/bitrix/themes', true, true);
@@ -78,6 +86,11 @@ class zolin_iadminer extends CModule
         // удаляем js-файлы
         \Bitrix\Main\IO\Directory::deleteDirectory(
             \Bitrix\Main\Application::getDocumentRoot() . '/bitrix/js/' . $this->MODULE_ID
+        );
+
+        // удаляем css-файлы
+        \Bitrix\Main\IO\Directory::deleteDirectory(
+            \Bitrix\Main\Application::getDocumentRoot() . '/bitrix/css/' . $this->MODULE_ID
         );
 
         DeleteDirFiles(__DIR__ . '/admin', $_SERVER['DOCUMENT_ROOT'] . '/bitrix/admin');

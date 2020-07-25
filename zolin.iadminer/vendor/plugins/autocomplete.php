@@ -30,10 +30,6 @@ class AdminerAutocomplete
 
     public function head()
     {
-//        if (!isset($_GET['sql'])) {
-//            return;
-//        }
-
         $suggests = [];
         foreach ($this->keywords as $keyword) {
             $suggests[] = "$keyword ";
@@ -44,6 +40,7 @@ class AdminerAutocomplete
                 $suggests[] = "$table.$field ";
             }
         } ?>
+        <link rel="stylesheet" type="text/css" href="/bitrix/css/zolin.iadminer/adminer.css">
         <script<?php echo nonce(); ?> type="text/javascript" src="/bitrix/js/zolin.iadminer/jquery.min.js"></script>
         <script<?php echo nonce(); ?> type="text/javascript" src="/bitrix/js/zolin.iadminer/tabcomplete.js"></script>
         <style>.hint {
